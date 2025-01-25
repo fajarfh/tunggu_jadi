@@ -1,16 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://cq462ytoc7wbl"]
+[gd_scene load_steps=28 format=3 uid="uid://c2w5gltid27hu"]
 
-[ext_resource type="Script" path="res://scripts/scene_1.gd" id="1_objfd"]
-[ext_resource type="Texture2D" uid="uid://e1ac37bnuybu" path="res://assets/prefabs/Stage_Select.png" id="2_qmkfg"]
-[ext_resource type="Texture2D" uid="uid://48dno7qbbllg" path="res://assets/prefabs/bubble.png" id="3_fvjcd"]
-[ext_resource type="Texture2D" uid="uid://dfkrbh4co1jgg" path="res://assets/prefabs/Shoes.png" id="4_bar8l"]
-[ext_resource type="Texture2D" uid="uid://dx8dirs8coupl" path="res://assets/prefabs/Beach_Ball.png" id="5_4hx6j"]
-[ext_resource type="Texture2D" uid="uid://cy28iifbek8s4" path="res://assets/prefabs/Camera.png" id="6_v0y37"]
-[ext_resource type="Texture2D" uid="uid://bebaporg015n5" path="res://assets/prefabs/Ribbon.png" id="7_nem7s"]
-[ext_resource type="Texture2D" uid="uid://bavqdbi1j0y8t" path="res://assets/prefabs/Bonfire.png" id="8_2ilfd"]
+[ext_resource type="Script" path="res://scripts/scene_1.gd" id="1_ed564"]
+[ext_resource type="Texture2D" uid="uid://e1ac37bnuybu" path="res://assets/prefabs/Stage_Select.png" id="2_vqle8"]
+[ext_resource type="Texture2D" uid="uid://48dno7qbbllg" path="res://assets/prefabs/bubble.png" id="3_lk5h8"]
+[ext_resource type="Texture2D" uid="uid://dfkrbh4co1jgg" path="res://assets/prefabs/Shoes.png" id="4_xtdhy"]
+[ext_resource type="Texture2D" uid="uid://dx8dirs8coupl" path="res://assets/prefabs/Beach_Ball.png" id="5_qfc5p"]
+[ext_resource type="Texture2D" uid="uid://cy28iifbek8s4" path="res://assets/prefabs/Camera.png" id="6_11kk4"]
+[ext_resource type="Texture2D" uid="uid://bebaporg015n5" path="res://assets/prefabs/Ribbon.png" id="7_lvrsg"]
+[ext_resource type="Texture2D" uid="uid://bavqdbi1j0y8t" path="res://assets/prefabs/Bonfire.png" id="8_tpc4t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx0rr"]
-texture = ExtResource("2_qmkfg")
+texture = ExtResource("2_vqle8")
 
 [sub_resource type="GDScript" id="GDScript_tdpqv"]
 
@@ -45,6 +45,42 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsrcn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="Animation" id="Animation_cbmr0"]
+resource_name = "reveal_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble 4/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0240298, 0.0240298, 0.0240298, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ac4gk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble 4/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0240298, 0.0240298, 0.0240298, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yk8ls"]
+_data = {
+"RESET": SubResource("Animation_ac4gk"),
+"reveal_4": SubResource("Animation_cbmr0")
+}
+
 [node name="Scene1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -52,7 +88,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_objfd")
+script = ExtResource("1_ed564")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -76,19 +112,18 @@ offset_right = -359.0
 offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_fvjcd")
+texture = ExtResource("3_lk5h8")
 expand_mode = 2
 stretch_mode = 4
 script = SubResource("GDScript_tdpqv")
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 1"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 41.0
 offset_top = -4.0
 offset_right = 553.0
 offset_bottom = 608.0
-texture = ExtResource("4_bar8l")
+texture = ExtResource("4_xtdhy")
 
 [node name="Button" type="Button" parent="Bubble 1"]
 layout_mode = 1
@@ -120,17 +155,16 @@ offset_right = 319.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_fvjcd")
+texture = ExtResource("3_lk5h8")
 expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 2"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 49.0
 offset_top = 34.0
 offset_right = 561.0
 offset_bottom = 546.0
-texture = ExtResource("5_4hx6j")
+texture = ExtResource("5_qfc5p")
 
 [node name="Button" type="Button" parent="Bubble 2"]
 layout_mode = 1
@@ -162,17 +196,16 @@ offset_right = 991.0
 offset_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_fvjcd")
+texture = ExtResource("3_lk5h8")
 expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 3"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 42.0
 offset_top = 38.0
 offset_right = 554.0
 offset_bottom = 550.0
-texture = ExtResource("6_v0y37")
+texture = ExtResource("6_11kk4")
 
 [node name="Button" type="Button" parent="Bubble 3"]
 layout_mode = 1
@@ -205,7 +238,7 @@ offset_right = -3.0
 offset_bottom = 519.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_fvjcd")
+texture = ExtResource("3_lk5h8")
 expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 4"]
@@ -215,7 +248,7 @@ offset_left = 60.0
 offset_top = 53.0
 offset_right = 572.0
 offset_bottom = 565.0
-texture = ExtResource("7_nem7s")
+texture = ExtResource("7_lvrsg")
 
 [node name="Button" type="Button" parent="Bubble 4"]
 layout_mode = 1
@@ -246,7 +279,7 @@ offset_right = 691.0
 offset_bottom = 533.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_fvjcd")
+texture = ExtResource("3_lk5h8")
 expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 5"]
@@ -263,7 +296,7 @@ offset_right = 215.0
 offset_bottom = 224.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_2ilfd")
+texture = ExtResource("8_tpc4t")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Bubble 5"]
@@ -281,6 +314,11 @@ focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_24r7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsrcn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yk8ls")
+}
 
 [connection signal="pressed" from="Bubble 1/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Bubble 2/Button" to="." method="_on_button_pressed2"]
