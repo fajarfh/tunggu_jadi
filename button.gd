@@ -14,4 +14,4 @@ func _on_Timer_timeout():
 
 func _on_NextButton_pressed():
    
-	get_tree().change_scene_to_file("res://scene_berikutnya.tscn")
+	get_tree().change_scene_to_file("res://texture_rect.tscn")
