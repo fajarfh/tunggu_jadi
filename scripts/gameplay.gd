@@ -3,47 +3,50 @@ extends Node2D
 @export var source:Node
 @export var curtain:Node
 @export var secondcurtain:Node
+@export var estear:Node
+@export var contButton:Node
+
+@export_file("*.tscn") var bubble_path
+
+@export_file("*.tscn") var puzzle_paths:Array[String]
+
+@export var puzzle_icons: Array[TextureRect]
+
 @export var time:float
 
-var detik : int
 
-@export_file("*.tscn") var instance_path
+@export var level_name:String
 
-@export_file("*.tscn") var puzzle_path_1
-@export_file("*.tscn") var puzzle_path_2
-@export_file("*.tscn") var puzzle_path_3
-@export_file("*.tscn") var puzzle_path_4
+@export var jeda_min = 1.0
+@export var jeda_max = 3.0
+var jeda = 0.0
 
-@export var icon_1:TextureRect
-@export var icon_2:TextureRect
-@export var icon_3:TextureRect
-@export var icon_4:TextureRect
+@export var speedup_min = -0.005
+@export var speedup_max = -0.01
+var speedup = -0.01
 
-var timer = 1.0
-var puzzle_paths = []
-var puzzle_icons = []
 var puzzle_answered = []
-
 var game_state = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	puzzle_paths = [puzzle_path_1, puzzle_path_2, puzzle_path_3, puzzle_path_4]
-	puzzle_icons = [icon_1, icon_2, icon_3, icon_4]
-	detik = 0
+		
+	
+	AudioControl.playBgm(level_name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	timer -= delta
-	
-	
+	jeda -= delta
+
 	tickTock(delta)
 	
-	if (timer <=0) && (game_state):
-		detik += 1
-		print(detik)
-		var bubble_res = load(instance_path)
+	if (jeda <=0) && (game_state):
+		
+		var bubble_res = load(bubble_path)
 		var bubble = bubble_res.instantiate()
+		
+		speedup = randf_range(speedup_min, speedup_max)
+		bubble.gravity_scale = speedup
 		source.add_child(bubble)
 
 		if randi_range(0,1) == 0:
@@ -51,6 +54,7 @@ func _process(delta):
 			var puzzle_res = load(puzzle_paths[index])
 			var puzzle = puzzle_res.instantiate()
 			puzzle.scale = 0.5 * (bubble.sprite.texture.get_size() * bubble.sprite.scale)/ (puzzle.find_children("Sprite2D", "Sprite2D")[0].texture.get_size()*puzzle.scale)
+			
 			bubble.add_child(puzzle)
 			bubble.puzzle = true
 			
@@ -60,11 +64,10 @@ func _process(delta):
 			
 			bubble.sendBomb.connect(bombActivated)
 		
-		
 		var random_scale = randf_range(1.0,2.0)
 		bubble.scale = Vector2(random_scale,random_scale)
 		bubble.position = Vector2(randf_range(-DisplayServer.screen_get_size().x/2,DisplayServer.screen_get_size().x/2),0)		
-		timer = 1.0
+		jeda = randf_range(jeda_min, jeda_max)
 
 func bombActivated():
 	for i in source.get_children():
@@ -76,9 +79,6 @@ func puzzleSelected(index:int):
 		puzzle_answered.append(index)
 		if puzzle_answered.size() == puzzle_icons.size():
 			winDawg()
-	
-
-
 
 func tickTock(countdown:float):
 
@@ -107,4 +107,14 @@ func winDawg():
 	secondcurtain.mouse_filter = Control.MOUSE_FILTER_STOP
 	#await get_tree().create_timer(3.0).timeout
 	secondcurtain.find_child("AnimationPlayer").play("winning")
+	GlobalVariable.level_clear_stat[level_name] = true
+	
+	
+func winPanel():
+	estear.visible = true
+	estear.find_child("AnimationPlayer").play("estear")
+	await get_tree().create_timer(1.0).timeout
+	contButton.visible = true
+	contButton.find_child("AnimationPlayer").play("slidein")
+	
 	

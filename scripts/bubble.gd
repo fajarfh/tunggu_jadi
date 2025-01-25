@@ -23,7 +23,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	add_constant_torque(delta*randf_range(-200,200))
+	add_constant_torque(randf_range(-500,500))
 	
 	
 	
@@ -65,10 +65,14 @@ func _on_body_entered(body):
 		
 
 func on_click_mouse():
+	
+	
 	self.queue_free()
 	if !puzzle:
+		AudioControl.playOnce(AudioControl.bop)
 		sendBomb.emit()
 	else:
+		AudioControl.playOnce(AudioControl.bop2)
 		sendPuzzle.emit()
 		
 	

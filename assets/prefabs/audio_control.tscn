@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://db35r6nxj78j5"]
+
+[ext_resource type="AudioStream" uid="uid://b6mnekv3usjax" path="res://assets/audio/BGM/5. Stage 3.ogg" id="1_0mblk"]
+[ext_resource type="Script" path="res://scripts/audio_control.gd" id="1_b01dn"]
+[ext_resource type="AudioStream" uid="uid://mk6j2pqcfepg" path="res://assets/audio/SFX/highUp.ogg" id="3_al4tv"]
+
+[node name="AudioStreamPlayer" type="Node" node_paths=PackedStringArray("sfx", "bgm")]
+script = ExtResource("1_b01dn")
+sfx = NodePath("AudioStreamPlayer2")
+bgm = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_0mblk")
+bus = &"BGM"
+parameters/looping = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_al4tv")
+bus = &"SFX"

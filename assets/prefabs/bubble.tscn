@@ -1,9 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://ccwma5s37wrt4"]
 
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_61t08"]
-[ext_resource type="Texture2D" uid="uid://b1m0b63w2jmie" path="res://assets/graphics/dotWhite.png" id="2_a52wf"]
+[ext_resource type="Texture2D" uid="uid://22qhmd0ih7yl" path="res://assets/graphics/Bubble.png" id="2_kt73f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_21qj6"]
+bounce = 0.41
+absorbent = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mk870"]
 radius = 81.0987
@@ -48,7 +50,7 @@ _data = {
 
 [node name="RigidBody2D" type="RigidBody2D" node_paths=PackedStringArray("sprite")]
 collision_layer = 3
-collision_mask = 3
+collision_mask = 7
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_21qj6")
 gravity_scale = -0.01
@@ -58,12 +60,13 @@ script = ExtResource("1_61t08")
 sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.12, 1.12)
 shape = SubResource("CircleShape2D_mk870")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.607843)
-scale = Vector2(7, 7)
-texture = ExtResource("2_a52wf")
+scale = Vector2(0.107924, 0.107924)
+texture = ExtResource("2_kt73f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
