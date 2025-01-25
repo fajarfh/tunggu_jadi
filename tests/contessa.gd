@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var source:Node
-@export var instance_path:String
+@export_file("*.tscn") var instance_path
 
 var timer = 3.0
 
@@ -14,10 +14,10 @@ func _ready():
 func _process(delta):
 	timer -= delta
 	
-	var bubble_res = load("res://rigid_body_2d.tscn")
+	var bubble_res = load(instance_path)
 	var bubble = bubble_res.instantiate()
 	
 	if timer <=0:
 		source.add_child(bubble)
-		bubble.position = Vector2(random,0)		
+		bubble.position = Vector2(randf_range(-DisplayServer.screen_get_size().x/2,DisplayServer.screen_get_size().x/2),0)		
 		timer = 3.0

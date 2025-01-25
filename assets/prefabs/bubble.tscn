@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccwma5s37wrt4"]
 
-[ext_resource type="Script" path="res://tes.gd" id="1_03dhu"]
+[ext_resource type="Script" path="res://scripts/bubble.gd" id="1_03dhu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_21qj6"]
 

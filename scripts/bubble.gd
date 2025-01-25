@@ -27,11 +27,8 @@ func _process(delta):
 			#self.apply_impulse(Vector2.RIGHT*delta*10000)
 		#else:
 			#
-		apply_impulse(Vector2.LEFT*delta*5000)
-		#*randi_range(-1,1)*delta*5000)
-		
-		
-		
+		apply_impulse(Vector2.LEFT*randi_range(-1,1)*50)
+
 		print(self.linear_velocity)
 		timer = 1.0
 		
