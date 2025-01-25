@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://db35r6nxj78j5"]
+
+[sub_resource type="AudioStream" id="AudioStream_j70hm"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = SubResource("AudioStream_j70hm")
+bus = &"SFX"
