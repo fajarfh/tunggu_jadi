@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dybndltqcsd3e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4pqtn"]
+load_path = "res://.godot/imported/sprite_0045.png-40742f991b0f6724927cc742f8615f3e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoh2b"]
+atlas = SubResource("CompressedTexture2D_4pqtn")
+region = Rect2(512, 512, 512, 512)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_eoh2b")
