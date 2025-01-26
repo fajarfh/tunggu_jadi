@@ -1,5 +1,7 @@
 extends Button
 
+@export_file("*.tscn") var sceneTujuan
+
 func _ready():
    
 	self.visible = false
@@ -14,4 +16,4 @@ func _on_Timer_timeout():
 
 func _on_NextButton_pressed():
    
-	get_tree().change_scene_to_file("res://texture_rect.tscn")
+	get_tree().change_scene_to_file(sceneTujuan)

@@ -5,6 +5,7 @@ extends Control
 @export var secondcurtain:Node
 @export var estear:Node
 @export var contButton:Node
+@export_file("*.tscn") var path_scene
 
 @export_file("*.tscn") var bubble_path
 
@@ -121,4 +122,9 @@ func winPanel():
 	contButton.visible = true
 	contButton.find_child("AnimationPlayer").play("slidein")
 	
-	
+func pindahScene(path):
+	get_tree().change_scene_to_file(path)
+
+
+func _on_continue_button_pressed():
+	pindahScene(path_scene) # Replace with function body.

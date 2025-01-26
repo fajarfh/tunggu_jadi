@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://hhngj211rolu"]
+[gd_scene load_steps=26 format=3 uid="uid://hhngj211rolu"]
 
 [ext_resource type="Script" path="res://scripts/scene_1.gd" id="1_lcqnv"]
+[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_chout"]
 [ext_resource type="Texture2D" uid="uid://e1ac37bnuybu" path="res://assets/prefabs/Stage_Select.png" id="2_efc3y"]
 [ext_resource type="Texture2D" uid="uid://48dno7qbbllg" path="res://assets/prefabs/bubble.png" id="3_vff44"]
 [ext_resource type="Texture2D" uid="uid://dfkrbh4co1jgg" path="res://assets/prefabs/Shoes.png" id="4_78dp2"]
@@ -28,9 +29,9 @@ texture = ExtResource("2_efc3y")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dxexg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_puvw8"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ec28l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_puvw8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_myt7t"]
 
@@ -53,6 +54,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lcqnv")
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_chout")
+expand_mode = 5
+stretch_mode = 4
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -144,6 +156,7 @@ offset_bottom = -54.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yv4ax")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yv4ax")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_1ne20")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_dxexg")
@@ -186,6 +199,7 @@ offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ec28l")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_puvw8")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ec28l")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_myt7t")
@@ -229,6 +243,7 @@ offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_24r7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsrcn")
@@ -278,6 +293,7 @@ offset_bottom = -44.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_24r7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsrcn")

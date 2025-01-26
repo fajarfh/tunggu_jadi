@@ -1,26 +1,26 @@
-[gd_scene load_steps=24 format=3 uid="uid://4qvq0086nft4"]
+[gd_scene load_steps=24 format=3 uid="uid://yjgp1ba4jbjn"]
 
-[ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_gjr2h"]
-[ext_resource type="PackedScene" uid="uid://dvi5muhh85thr" path="res://assets/prefabs/conveyor.tscn" id="2_dt2fh"]
-[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_lnnl2"]
-[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/graphics/puzzle/lv1/Shoes.png" id="3_6qeo4"]
+[ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_vtaaa"]
+[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_5ikin"]
+[ext_resource type="PackedScene" uid="uid://dvi5muhh85thr" path="res://assets/prefabs/conveyor.tscn" id="3_pymsn"]
+[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/graphics/puzzle/lv1/Shoes.png" id="4_wom36"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7erp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y50sr"]
-atlas = ExtResource("3_6qeo4")
+atlas = ExtResource("4_wom36")
 region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihn7h"]
-atlas = ExtResource("3_6qeo4")
+atlas = ExtResource("4_wom36")
 region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hj48"]
-atlas = ExtResource("3_6qeo4")
+atlas = ExtResource("4_wom36")
 region = Rect2(0, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prcss"]
-atlas = ExtResource("3_6qeo4")
+atlas = ExtResource("4_wom36")
 region = Rect2(256, 256, 256, 256)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_md2ey"]
@@ -391,13 +391,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gjr2h")
+script = ExtResource("1_vtaaa")
 source = NodePath("Node2D")
 curtain = NodePath("CanvasLayer/Curtain")
 secondcurtain = NodePath("CanvasLayer/SecondCurtain")
 estear = NodePath("CanvasLayer/Estear")
 contButton = NodePath("CanvasLayer/ContinueButton")
-path_scene = "res://scenes/scene_4.tscn"
+path_scene = "res://scenes/scene_11.tscn"
 bubble_path = "res://assets/prefabs/bubble.tscn"
 puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv1/lv1_1.tscn", "res://assets/graphics/puzzle/lv1/lv1_2.tscn", "res://assets/graphics/puzzle/lv1/lv1_3.tscn", "res://assets/graphics/puzzle/lv1/lv1_4.tscn"])
 puzzle_icons = [NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect2"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect3"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect4")]
@@ -413,7 +413,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_lnnl2")
+texture = ExtResource("2_5ikin")
 expand_mode = 1
 flip_h = true
 
@@ -449,14 +449,14 @@ shape = SubResource("WorldBoundaryShape2D_s7erp")
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(957.681, 1153)
 
-[node name="conveyor" parent="." instance=ExtResource("2_dt2fh")]
+[node name="conveyor" parent="." instance=ExtResource("3_pymsn")]
 position = Vector2(966, 535)
 rotation = -3.00936
 collision_mask = 7
 input_pickable = false
 impulse_strength_max = 200
 
-[node name="conveyor2" parent="." instance=ExtResource("2_dt2fh")]
+[node name="conveyor2" parent="." instance=ExtResource("3_pymsn")]
 position = Vector2(950, 902)
 collision_mask = 7
 input_pickable = false
@@ -481,7 +481,7 @@ size_flags_horizontal = 8
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("3_6qeo4")
+texture = ExtResource("4_wom36")
 expand_mode = 3
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/MarginContainer"]
@@ -520,6 +520,7 @@ texture = SubResource("AtlasTexture_prcss")
 expand_mode = 2
 
 [node name="Curtain" type="TextureRect" parent="CanvasLayer"]
+visible = false
 modulate = Color(0, 0, 0, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -557,7 +558,7 @@ offset_top = 20.0
 offset_right = 1900.0
 offset_bottom = 230.0
 pivot_offset = Vector2(105, 105)
-texture = ExtResource("3_6qeo4")
+texture = ExtResource("4_wom36")
 expand_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Estear"]
@@ -573,9 +574,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.0
+offset_left = -159.999
 offset_top = 60.0
-offset_right = 160.0
+offset_right = 160.001
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -586,5 +587,3 @@ text = "CONTINUE"
 libraries = {
 "": SubResource("AnimationLibrary_24g22")
 }
-
-[connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]

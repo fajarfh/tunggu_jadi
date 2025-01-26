@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://pd57jqx32fhx"]
+[gd_scene load_steps=24 format=3 uid="uid://cak3ukkmcbinw"]
 
-[ext_resource type="Texture2D" uid="uid://8mqk74gie720" path="res://assets/scene1.jpg" id="1_twyra"]
-[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_as2bf"]
-[ext_resource type="Script" path="res://animation_player.gd" id="2_ngixf"]
-[ext_resource type="Script" path="res://button.gd" id="3_lkowi"]
-[ext_resource type="AudioStream" uid="uid://dfr68e760grkg" path="res://assets/2. Therapy Room.ogg" id="5_m06cv"]
+[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/illusrtration/The_Scene_3.jpg" id="1_jdd4b"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_4u5na"]
+[ext_resource type="Script" path="res://animation_player.gd" id="3_312j3"]
+[ext_resource type="Script" path="res://button.gd" id="4_1k5d4"]
+[ext_resource type="AudioStream" uid="uid://dfr68e760grkg" path="res://assets/2. Therapy Room.ogg" id="5_w2fjt"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001
@@ -279,6 +279,33 @@ _data = {
 "new_animation5": SubResource("Animation_epi4t")
 }
 
+[sub_resource type="Animation" id="Animation_8nj43"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_5ibdx"]
 resource_name = "new_animation6"
 length = 30.0
@@ -307,33 +334,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_8nj43"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_stxqu"]
 _data = {
 "RESET": SubResource("Animation_8nj43"),
@@ -347,22 +347,22 @@ _data = {
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -540.0
-offset_right = 960.0
-offset_bottom = 540.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(963.5, 559)
-scale = Vector2(0.463221, 0.465812)
-texture = ExtResource("1_twyra")
+[node name="Sprite2D" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jdd4b")
+expand_mode = 5
+stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 0)
@@ -378,7 +378,7 @@ offset_top = -157.0
 offset_right = 596.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_as2bf")
+theme_override_fonts/normal_font = ExtResource("2_4u5na")
 theme_override_font_sizes/normal_font_size = 40
 text = "Why does nothing I do ever work out?"
 visible_characters = 0
@@ -389,7 +389,7 @@ libraries = {
 "": SubResource("AnimationLibrary_f62j3")
 }
 autoplay = "new_animation"
-script = ExtResource("2_ngixf")
+script = ExtResource("3_312j3")
 
 [node name="Text" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -404,7 +404,7 @@ offset_top = -116.0
 offset_right = 379.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_as2bf")
+theme_override_fonts/normal_font = ExtResource("2_4u5na")
 theme_override_font_sizes/normal_font_size = 40
 text = "What’s wrong with me? 
 "
@@ -415,7 +415,7 @@ visible_ratio = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_y1jtc")
 }
-script = ExtResource("2_ngixf")
+script = ExtResource("3_312j3")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 0)
@@ -430,7 +430,7 @@ offset_top = -153.0
 offset_right = 415.5
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_as2bf")
+theme_override_fonts/normal_font = ExtResource("2_4u5na")
 theme_override_font_sizes/normal_font_size = 40
 text = "Is there something strange about me…"
 
@@ -438,7 +438,7 @@ text = "Is there something strange about me…"
 libraries = {
 "": SubResource("AnimationLibrary_nbnbm")
 }
-script = ExtResource("2_ngixf")
+script = ExtResource("3_312j3")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -452,7 +452,7 @@ offset_top = -169.0
 offset_right = 373.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_as2bf")
+theme_override_fonts/normal_font = ExtResource("2_4u5na")
 theme_override_font_sizes/normal_font_size = 40
 text = "That’s why I decided to come here..."
 visible_characters = 0
@@ -462,7 +462,7 @@ visible_ratio = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_fjy6k")
 }
-script = ExtResource("2_ngixf")
+script = ExtResource("3_312j3")
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -476,7 +476,7 @@ offset_top = -74.0
 offset_right = 367.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_as2bf")
+theme_override_fonts/normal_font = ExtResource("2_4u5na")
 theme_override_font_sizes/normal_font_size = 40
 text = "I want to find the solution here..."
 visible_characters = 0
@@ -502,14 +502,15 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_as2bf")
+theme_override_fonts/font = ExtResource("2_4u5na")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next
 "
 vertical_icon_alignment = 0
-script = ExtResource("3_lkowi")
+script = ExtResource("4_1k5d4")
+sceneTujuan = "res://scenes/scene_7.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
 wait_time = 20.2
@@ -517,7 +518,7 @@ one_shot = true
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_m06cv")
+stream = ExtResource("5_w2fjt")
 autoplay = true
 
 [connection signal="pressed" from="Button" to="RichTextLabel/AnimationPlayer" method="_on_next_button_pressed"]
