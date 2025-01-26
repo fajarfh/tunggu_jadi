@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvi5muhh85thr"]
+
+[ext_resource type="Script" path="res://scripts/conveyor.gd" id="1_sk1bo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqi08"]
+size = Vector2(1961, 91)
+
+[node name="conveyor" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_sk1bo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aqi08")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
