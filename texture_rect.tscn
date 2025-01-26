@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://pd57jqx32fhx"]
 
-[ext_resource type="Texture2D" uid="uid://cm5orj564ckcg" path="res://assets/🍊🧡.jpeg" id="1_vehnt"]
+[ext_resource type="Texture2D" uid="uid://8mqk74gie720" path="res://assets/scene1.jpg" id="1_twyra"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_as2bf"]
 [ext_resource type="Script" path="res://animation_player.gd" id="2_ngixf"]
 [ext_resource type="Script" path="res://button.gd" id="3_lkowi"]
@@ -360,9 +360,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(2.83556, 0.896667)
-texture = ExtResource("1_vehnt")
+position = Vector2(963.5, 559)
+scale = Vector2(0.463221, 0.465812)
+texture = ExtResource("1_twyra")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 0)
