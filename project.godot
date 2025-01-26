@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="yuru_jam"
-run/main_scene="res://texture_rect.tscn"
+
+run/main_scene="res://scenes/Main_menu.tscn"
+
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalVariable="*res://scripts/global_variable.gd"
+AudioControl="*res://assets/prefabs/audio_control.tscn"
 
 [display]
 

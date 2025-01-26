@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://6g7rk2oyu88i"]
+
+[ext_resource type="Script" path="res://scripts/lose_scene.gd" id="1_f638y"]
+[ext_resource type="Texture2D" uid="uid://ptkeu71xq7a7" path="res://assets/sample/interface_bg_sample.jpg" id="1_sbvka"]
+[ext_resource type="FontFile" uid="uid://dy85x417tpuc3" path="res://assets/sample/BaksoSapi.otf" id="3_pw8tb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_32qnw"]
+texture = ExtResource("1_sbvka")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14b5g"]
+bg_color = Color(0.801177, 0.408861, 0.901603, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.407843, 0.901961, 1)
+expand_margin_left = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4b1h"]
+bg_color = Color(0.582043, 0.15593, 0.682924, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpku8"]
+bg_color = Color(0.737255, 0.45098, 0.921569, 0.686275)
+border_width_left = 11
+border_width_top = 1
+border_width_right = 11
+border_width_bottom = 1
+border_color = Color(0.728611, 0.433903, 0.916477, 0.686275)
+shadow_color = Color(0.0941176, 0.054902, 0.0352941, 0.74902)
+shadow_size = 5
+shadow_offset = Vector2(3, 0)
+
+[node name="LoseScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -600.0
+offset_top = 925.0
+offset_right = -600.0
+offset_bottom = 925.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f638y")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_32qnw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -255.0
+offset_right = 184.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_14b5g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u4b1h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qpku8")
+text = "Yes"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_14b5g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u4b1h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qpku8")
+text = "No
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -267.0
+offset_right = 160.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.455167, 0.214098, 0.494962, 1)
+theme_override_colors/font_shadow_color = Color(0.116127, 0.116127, 0.116127, 1)
+theme_override_colors/font_outline_color = Color(0.15967, 0.15967, 0.15967, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_pw8tb")
+theme_override_font_sizes/font_size = 90
+text = "Retry?"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_no_pressed"]
