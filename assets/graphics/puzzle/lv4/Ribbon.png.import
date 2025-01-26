@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crq3i7mejmqur"
-path="res://.godot/imported/Ribbon.png-2c1545a05cd6126b33412f666af4fcdc.ctex"
+path="res://.godot/imported/Ribbon.png-77f1439389b757855a9c79c34a40b524.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/puzzle/Ribbon.png"
-dest_files=["res://.godot/imported/Ribbon.png-2c1545a05cd6126b33412f666af4fcdc.ctex"]
+source_file="res://assets/graphics/puzzle/lv4/Ribbon.png"
+dest_files=["res://.godot/imported/Ribbon.png-77f1439389b757855a9c79c34a40b524.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfxotee8orh2"
-path="res://.godot/imported/Beach_Ball.png-7ff6c7d5fa3f78956b61a1655cefb590.ctex"
+uid="uid://ccrl45p1c5ol7"
+path="res://.godot/imported/Camera.png-bdbc81b0cdecd2de44c063c118d94e97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/puzzle/Beach_Ball.png"
-dest_files=["res://.godot/imported/Beach_Ball.png-7ff6c7d5fa3f78956b61a1655cefb590.ctex"]
+source_file="res://assets/graphics/puzzle/lv3/Camera.png"
+dest_files=["res://.godot/imported/Camera.png-bdbc81b0cdecd2de44c063c118d94e97.ctex"]
 
 [params]
 

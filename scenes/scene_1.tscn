@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://dyfgtha0277em"]
+[gd_scene load_steps=25 format=3 uid="uid://dyfgtha0277em"]
 
+[ext_resource type="Script" path="res://scripts/scene_1_callbgm.gd" id="1_jf6c8"]
 [ext_resource type="Texture2D" uid="uid://8mqk74gie720" path="res://assets/scene1.jpg" id="1_twyra"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_as2bf"]
 [ext_resource type="Script" path="res://animation_player.gd" id="2_ngixf"]
@@ -352,6 +353,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jf6c8")
 
 [node name="Sprite2D" type="TextureRect" parent="."]
 layout_mode = 1

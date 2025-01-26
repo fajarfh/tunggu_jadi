@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca6cskhrwtvjm"]
+
+[ext_resource type="Texture2D" uid="uid://drfxotee8orh2" path="res://assets/graphics/puzzle/lv2/Beach_Ball.png" id="1_xidm5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meyui"]
+atlas = ExtResource("1_xidm5")
+region = Rect2(0, 256, 256, 256)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_meyui")
