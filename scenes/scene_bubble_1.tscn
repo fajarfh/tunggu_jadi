@@ -81,7 +81,7 @@ _data = {
 "reveal_1": SubResource("Animation_t78vk")
 }
 
-[node name="Scene1" type="Control"]
+[node name="Scene1" type="Control" node_paths=PackedStringArray("animButtons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,6 +89,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7y4ar")
+animButtons = [null, null, null, null, null]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

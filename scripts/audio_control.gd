@@ -18,14 +18,13 @@ var pop2 = preload("res://assets/audio/SFX/Bubble Drip/2.ogg")
 var pop3 = preload("res://assets/audio/SFX/Bubble Drip/3.ogg")
 var pop4 = preload("res://assets/audio/SFX/Bubble Drip/4.ogg")
 #daftar BGM
-var bgm_main = preload("res://assets/audio/BGM/1. Main Theme.ogg")
-var bgm_intro = preload("res://assets/audio/BGM/2. Therapy Room.ogg")
-var bgm_lv1 = preload("res://assets/audio/BGM/3. Stage 1.ogg")
+var bgm_main = preload("res://assets/audio/BGM/1. Blessings (Main Theme).ogg")
+var bgm_intro = preload("res://assets/audio/BGM/2. Remedy .ogg")
+var bgm_lv1 = preload("res://assets/audio/BGM/3. Stage 1  .ogg")
 var bgm_lv2 = preload("res://assets/audio/BGM/4. Stage 2.ogg")
 var bgm_lv3 = preload("res://assets/audio/BGM/5. Stage 3.ogg")
 var bgm_lv4 = preload("res://assets/audio/BGM/6. Stage 4.ogg")
-var bgm_lv5 = preload("res://assets/audio/BGM/5. Stage 3.ogg")
-var bgm_end = preload("res://assets/audio/BGM/8. Main Theme~Vocals.ogg")
+var bgm_end = preload("res://assets/audio/BGM/7. Blessings ft. ANRI.ogg")
 
 #daftar Ambience
 var amb_playground = preload("res://assets/audio/Ambience/1. Children Playing at a Playground.mp3")
@@ -60,7 +59,7 @@ func playBgm(level):
 		"level4":
 			aset = bgm_lv4
 		"level5":
-			aset = bgm_lv5
+			aset = bgm_lv1
 		"end":
 			aset = bgm_end
 	

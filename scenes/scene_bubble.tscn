@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://hhngj211rolu"]
+[gd_scene load_steps=29 format=3 uid="uid://hhngj211rolu"]
 
 [ext_resource type="Script" path="res://scripts/scene_1.gd" id="1_lcqnv"]
 [ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_chout"]
@@ -23,6 +23,42 @@ texture = ExtResource("2_efc3y")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_468ud"]
 
+[sub_resource type="Animation" id="Animation_3wol8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v2qxr"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_251b0"]
+_data = {
+"RESET": SubResource("Animation_3wol8"),
+"reveal": SubResource("Animation_v2qxr")
+}
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yv4ax"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ne20"]
@@ -46,7 +82,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsrcn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Scene1" type="Control"]
+[node name="Scene1" type="Control" node_paths=PackedStringArray("animButtons", "buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,6 +90,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lcqnv")
+animButtons = [NodePath("Bubble 1/AnimationPlayer"), NodePath("Bubble 2/AnimationPlayer"), NodePath("Bubble 3/AnimationPlayer"), NodePath("Bubble 4/AnimationPlayer"), NodePath("Bubble 5/AnimationPlayer")]
+buttons = [NodePath("Bubble 1/Button"), NodePath("Bubble 2/Button"), NodePath("Bubble 3/Button"), NodePath("Bubble 4/Button"), NodePath("Bubble 5/Button")]
 
 [node name="Sprite2D" type="TextureRect" parent="."]
 layout_mode = 1
@@ -119,6 +157,11 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_uo18y")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rbyj5")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_468ud")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bubble 1"]
+libraries = {
+"": SubResource("AnimationLibrary_251b0")
+}
+
 [node name="Bubble 2" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -161,6 +204,12 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yv4ax")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_1ne20")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_dxexg")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_468ud")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bubble 2"]
+libraries = {
+"": SubResource("AnimationLibrary_251b0")
+}
 
 [node name="Bubble 3" type="TextureRect" parent="."]
 layout_mode = 1
@@ -205,6 +254,12 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ec28l")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_myt7t")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ja7ig")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_468ud")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bubble 3"]
+libraries = {
+"": SubResource("AnimationLibrary_251b0")
+}
 
 [node name="Bubble 4" type="TextureRect" parent="."]
 layout_mode = 1
@@ -223,7 +278,7 @@ texture = ExtResource("3_vff44")
 expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 4"]
-modulate = Color(0.0240298, 0.0240298, 0.0240298, 1)
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 60.0
 offset_top = 53.0
@@ -247,6 +302,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_24r7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsrcn")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bubble 4"]
+libraries = {
+"": SubResource("AnimationLibrary_251b0")
+}
 
 [node name="Bubble 5" type="TextureRect" parent="."]
 layout_mode = 1
@@ -265,7 +326,7 @@ texture = ExtResource("3_vff44")
 expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Bubble 5"]
-modulate = Color(0.0295066, 0.0295066, 0.0295066, 1)
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -297,6 +358,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m2w2g")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_24r7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsrcn")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bubble 5"]
+libraries = {
+"": SubResource("AnimationLibrary_251b0")
+}
 
 [connection signal="pressed" from="Bubble 1/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Bubble 2/Button" to="." method="_on_button_pressed2"]

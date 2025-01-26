@@ -5,6 +5,8 @@ extends Control
 @export var secondcurtain:Node
 @export var estear:Node
 @export var contButton:Node
+@export var losePanel:Node
+
 @export_file("*.tscn") var path_scene
 
 @export_file("*.tscn") var bubble_path
@@ -26,8 +28,10 @@ var jeda = 0.0
 @export var speedup_max = -0.01
 var speedup = -0.01
 
+@export var probability_puzzle: int = 3
 var puzzle_answered = []
 var game_state = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,7 +55,7 @@ func _process(delta):
 		bubble.gravity_scale = speedup
 		source.add_child(bubble)
 
-		if randi_range(0,1) == 0:
+		if randi_range(0,3) < probability_puzzle:
 			var index = randi_range(0,3)
 			var puzzle_res = load(puzzle_paths[index])
 			var puzzle = puzzle_res.instantiate()
@@ -106,6 +110,9 @@ func losing():
 	await get_tree().create_timer(1.0).timeout
 	curtain.find_child("AnimationPlayer").play("losing")
 	print(curtain.find_child("AnimationPlayer").is_playing())
+	await get_tree().create_timer(0.5).timeout
+	losePanel.find_child("AnimationPlayer").play("appear")
+	
 
 func winDawg():
 	game_state = false
@@ -128,3 +135,13 @@ func pindahScene(path):
 
 func _on_continue_button_pressed():
 	pindahScene(path_scene) # Replace with function body.
+
+
+
+
+func _on_button_yes_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_button_no_pressed():
+	get_tree().change_scene_to_file("res://scenes/scene_bubble.tscn") # Replace with function body.

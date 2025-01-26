@@ -1,26 +1,27 @@
-[gd_scene load_steps=24 format=3 uid="uid://cwmnuxqs0wt1n"]
+[gd_scene load_steps=31 format=3 uid="uid://cwmnuxqs0wt1n"]
 
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_wiqs1"]
 [ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_nt46k"]
+[ext_resource type="Texture2D" uid="uid://drfxotee8orh2" path="res://assets/graphics/puzzle/lv2/Beach_Ball.png" id="4_bcqmx"]
 [ext_resource type="PackedScene" uid="uid://dvi5muhh85thr" path="res://assets/prefabs/conveyor.tscn" id="4_smenk"]
-[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/graphics/puzzle/lv1/Shoes.png" id="5_ng5vo"]
+[ext_resource type="FontFile" uid="uid://dy85x417tpuc3" path="res://assets/sample/BaksoSapi.otf" id="5_1srxu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7erp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y50sr"]
-atlas = ExtResource("5_ng5vo")
+atlas = ExtResource("4_bcqmx")
 region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihn7h"]
-atlas = ExtResource("5_ng5vo")
+atlas = ExtResource("4_bcqmx")
 region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hj48"]
-atlas = ExtResource("5_ng5vo")
+atlas = ExtResource("4_bcqmx")
 region = Rect2(0, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prcss"]
-atlas = ExtResource("5_ng5vo")
+atlas = ExtResource("4_bcqmx")
 region = Rect2(256, 256, 256, 256)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_md2ey"]
@@ -384,7 +385,67 @@ _data = {
 "slidein": SubResource("Animation_rwuvc")
 }
 
-[node name="Control" type="Control" node_paths=PackedStringArray("source", "curtain", "secondcurtain", "estear", "contButton", "puzzle_icons")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nk65m"]
+bg_color = Color(0.801177, 0.408861, 0.901603, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.407843, 0.901961, 1)
+expand_margin_left = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itk57"]
+bg_color = Color(0.582043, 0.15593, 0.682924, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw6tn"]
+bg_color = Color(0.737255, 0.45098, 0.921569, 0.686275)
+border_width_left = 11
+border_width_top = 1
+border_width_right = 11
+border_width_bottom = 1
+border_color = Color(0.728611, 0.433903, 0.916477, 0.686275)
+shadow_color = Color(0.0941176, 0.054902, 0.0352941, 0.74902)
+shadow_size = 5
+shadow_offset = Vector2(3, 0)
+
+[sub_resource type="Animation" id="Animation_nhxs3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ejy6g"]
+resource_name = "appear"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxgoe"]
+_data = {
+"RESET": SubResource("Animation_nhxs3"),
+"appear": SubResource("Animation_ejy6g")
+}
+
+[node name="Control" type="Control" node_paths=PackedStringArray("source", "curtain", "secondcurtain", "estear", "contButton", "losePanel", "puzzle_icons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -398,14 +459,16 @@ curtain = NodePath("CanvasLayer/Curtain")
 secondcurtain = NodePath("CanvasLayer/SecondCurtain")
 estear = NodePath("CanvasLayer/Estear")
 contButton = NodePath("CanvasLayer/ContinueButton")
+losePanel = NodePath("LosingCondition")
 path_scene = "res://scenes/scene_5.tscn"
 bubble_path = "res://assets/prefabs/bubble.tscn"
-puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv1/lv1_1.tscn", "res://assets/graphics/puzzle/lv1/lv1_2.tscn", "res://assets/graphics/puzzle/lv1/lv1_3.tscn", "res://assets/graphics/puzzle/lv1/lv1_4.tscn"])
+puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv2/1.tscn", "res://assets/graphics/puzzle/lv2/2.tscn", "res://assets/graphics/puzzle/lv2/3.tscn", "res://assets/graphics/puzzle/lv2/4.tscn"])
 puzzle_icons = [NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect2"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect3"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect4")]
 time = 60.0
-level_name = "level1"
-speedup_min = -0.15
-speedup_max = -0.09
+level_name = "level2"
+jeda_max = 2.0
+speedup_min = -0.17
+speedup_max = -0.1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -486,7 +549,7 @@ mouse_filter = 2
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("5_ng5vo")
+texture = ExtResource("4_bcqmx")
 expand_mode = 3
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/MarginContainer"]
@@ -568,7 +631,7 @@ offset_right = 1900.0
 offset_bottom = 230.0
 pivot_offset = Vector2(105, 105)
 mouse_filter = 2
-texture = ExtResource("5_ng5vo")
+texture = ExtResource("4_bcqmx")
 expand_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Estear"]
@@ -596,6 +659,62 @@ text = "CONTINUE"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ContinueButton"]
 libraries = {
 "": SubResource("AnimationLibrary_24g22")
+}
+
+[node name="LosingCondition" type="VBoxContainer" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -255.0
+offset_right = 184.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="Label" type="Label" parent="LosingCondition"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.455167, 0.214098, 0.494962, 1)
+theme_override_colors/font_shadow_color = Color(0.116127, 0.116127, 0.116127, 1)
+theme_override_colors/font_outline_color = Color(0.15967, 0.15967, 0.15967, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("5_1srxu")
+theme_override_font_sizes/font_size = 90
+text = "Retry?"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="LosingCondition"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_nk65m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_itk57")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kw6tn")
+text = "Yes"
+
+[node name="Button2" type="Button" parent="LosingCondition"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_nk65m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_itk57")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kw6tn")
+text = "No
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LosingCondition"]
+libraries = {
+"": SubResource("AnimationLibrary_qxgoe")
 }
 
 [connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]
