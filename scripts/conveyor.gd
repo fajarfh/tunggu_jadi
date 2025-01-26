@@ -17,6 +17,6 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body is RigidBody2D:
-		print("pak eko?")
+		#print("pak eko?")
 		impulse_strength = randi_range(impulse_strength_min,impulse_strength_max)
 		body.apply_impulse(Vector2.from_angle(self.rotation_degrees)*impulse_strength) # Replace with function body.

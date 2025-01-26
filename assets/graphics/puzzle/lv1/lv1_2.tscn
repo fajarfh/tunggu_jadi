@@ -1,11 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://ciie5yur3x6qe"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nlmlc"]
-load_path = "res://.godot/imported/sprite_0045.png-40742f991b0f6724927cc742f8615f3e.ctex"
+[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/graphics/puzzle/lv1/Shoes.png" id="1_uuju5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akmg8"]
-atlas = SubResource("CompressedTexture2D_nlmlc")
-region = Rect2(512, 0, 512, 512)
+atlas = ExtResource("1_uuju5")
+region = Rect2(256, 0, 256, 256)
 
 [node name="Node2D" type="Node2D"]
 

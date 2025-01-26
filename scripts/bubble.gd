@@ -1,6 +1,9 @@
 extends RigidBody2D
 
 @export var sprite:Sprite2D
+@export var collision:CollisionShape2D
+@export var animator:AnimationPlayer
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 var timer = 0.5
 var dir = [-1,1]
@@ -60,19 +63,17 @@ func _on_body_entered(body):
 		"wall_up":
 			#print("kiri")
 			queue_free()
-		"conveyor":
-			tergeser = true
 		
 
 func on_click_mouse():
 	
 	
-	self.queue_free()
+	bubble_death()
 	if !puzzle:
-		AudioControl.playOnce(AudioControl.bop)
+		AudioControl.playOnce(AudioControl.pop2)
 		sendBomb.emit()
 	else:
-		AudioControl.playOnce(AudioControl.bop2)
+		
 		sendPuzzle.emit()
 		
 	
@@ -84,3 +85,9 @@ func _on_input_event(viewport, event, shape_idx):
 		
 func call_back_tween_scale(newScale:Vector2):
 	self.scale = newScale
+
+func bubble_death():
+	collision.disabled = true
+	#AudioControl.playOnce(AudioControl.bop2)
+	audio_stream_player_2d.play()
+	animator.play("pop")

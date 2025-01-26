@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @export var source:Node
 @export var curtain:Node
@@ -33,6 +33,7 @@ func _ready():
 		
 	
 	AudioControl.playBgm(level_name)
+	AudioControl.playAmbience(level_name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -71,15 +72,18 @@ func _process(delta):
 
 func bombActivated():
 	for i in source.get_children():
-		i.queue_free()
+		i.bubble_death()
 
 func puzzleSelected(index:int):
 	if index not in puzzle_answered:
 		puzzle_icons[index].modulate.a = 0
 		puzzle_answered.append(index)
+		AudioControl.playOnce(AudioControl.pop1)
 		if puzzle_answered.size() == puzzle_icons.size():
 			winDawg()
-
+	else:
+		AudioControl.playOnce(AudioControl.pop4)
+		
 func tickTock(countdown:float):
 
 	if (game_state):

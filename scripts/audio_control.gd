@@ -2,6 +2,7 @@ extends Node
 
 @export var sfx : AudioStreamPlayer
 @export var bgm : AudioStreamPlayer
+@export var amb : AudioStreamPlayer
 
 #daftar SFX
 var bop = preload("res://assets/audio/SFX/highUp.ogg")
@@ -11,17 +12,25 @@ var bop2 = preload("res://assets/audio/SFX/laser3.ogg")
 #var ui2 = preload(ui2_res)
 #var jingleWin = preload(jingleWin_res)
 #var jingleLose = preload(jingleLose_res)
-
+var pop0 = preload("res://assets/audio/SFX/4. Bubble Pop.mp3")
+var pop1 = preload("res://assets/audio/SFX/Bubble Drip/1.ogg")
+var pop2 = preload("res://assets/audio/SFX/Bubble Drip/2.ogg")
+var pop3 = preload("res://assets/audio/SFX/Bubble Drip/3.ogg")
+var pop4 = preload("res://assets/audio/SFX/Bubble Drip/4.ogg")
 #daftar BGM
 var bgm_main = preload("res://assets/audio/BGM/1. Main Theme.ogg")
 var bgm_intro = preload("res://assets/audio/BGM/2. Therapy Room.ogg")
 var bgm_lv1 = preload("res://assets/audio/BGM/3. Stage 1.ogg")
 var bgm_lv2 = preload("res://assets/audio/BGM/4. Stage 2.ogg")
 var bgm_lv3 = preload("res://assets/audio/BGM/5. Stage 3.ogg")
-var bgm_lv4 = preload("res://assets/audio/BGM/5. Stage 3.ogg")
+var bgm_lv4 = preload("res://assets/audio/BGM/6. Stage 4.ogg")
 var bgm_lv5 = preload("res://assets/audio/BGM/5. Stage 3.ogg")
 var bgm_end = preload("res://assets/audio/BGM/8. Main Theme~Vocals.ogg")
 
+#daftar Ambience
+var amb_playground = preload("res://assets/audio/Ambience/1. Children Playing at a Playground.mp3")
+var amb_therapy = preload("res://assets/audio/Ambience/2. Therapy Room.mp3")
+var amb_bonfire = preload("res://assets/audio/Ambience/3. Bonfire.mp3")
 
 func _ready():
 	pass
@@ -55,6 +64,24 @@ func playBgm(level):
 		"end":
 			aset = bgm_end
 	
-	if (!bgm.playing) || (bgm.stream != aset):		
-		bgm.stream = aset
-		bgm.play()
+	if level != "":
+		if (!bgm.playing) || (bgm.stream != aset):		
+			bgm.stream = aset
+			bgm.set("parameters/looping",true)
+			bgm.play()
+
+func playAmbience(level):
+	var aset
+	match level:
+		"intro":
+			aset = amb_therapy
+		"level1":
+			aset = amb_playground
+		"level5":
+			aset = amb_bonfire
+	
+	if level != "":
+		if (!amb.playing) || (amb.stream != aset):		
+			amb.stream = aset
+			amb.set("parameters/looping",true)
+			amb.play()

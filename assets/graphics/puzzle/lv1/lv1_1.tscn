@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://s67lgjsal6g6"]
 
-[ext_resource type="Texture2D" uid="uid://xdlfkki7t2" path="res://assets/graphics/puzzle/lv1/sprite_0045.png" id="1_e1xdq"]
+[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/graphics/puzzle/lv1/Shoes.png" id="1_f01wc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ib2su"]
-atlas = ExtResource("1_e1xdq")
-region = Rect2(0, 0, 512, 512)
+atlas = ExtResource("1_f01wc")
+region = Rect2(0, 0, 256, 246)
 
 [node name="Node2D" type="Node2D"]
 
