@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciie5yur3x6qe"]
+
+[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/prefabs/puzzle/lv1/Shoes.png" id="1_uuju5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akmg8"]
+atlas = ExtResource("1_uuju5")
+region = Rect2(256, 0, 256, 256)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_akmg8")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5aiuclkhkowm"]
+
+[ext_resource type="Texture2D" uid="uid://ccrl45p1c5ol7" path="res://assets/prefabs/puzzle/lv3/Camera.png" id="1_63mp4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akmg8"]
+atlas = ExtResource("1_63mp4")
+region = Rect2(256, 0, 256, 256)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_akmg8")

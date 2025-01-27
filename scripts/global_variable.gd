@@ -10,6 +10,7 @@ var level_clear_stat = {
 	"level5" : false
 }
 	
+var levelBaruBeres = ""
 
 func justCallIt():
 	print(level_clear_stat)

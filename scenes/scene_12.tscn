@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://dm0bni1ax4gao"]
+[gd_scene load_steps=24 format=3 uid="uid://birpwnlitu8hb"]
 
-[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/illusrtration/The_Scene_3.jpg" id="1_va2h6"]
-[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_wfjkp"]
-[ext_resource type="Script" path="res://animation_player.gd" id="3_mf56h"]
-[ext_resource type="Script" path="res://button.gd" id="4_pj3ma"]
-[ext_resource type="AudioStream" uid="uid://dfr68e760grkg" path="res://assets/2. Therapy Room.ogg" id="5_y3bgp"]
+[ext_resource type="Script" path="res://scripts/scene_12_callbgm.gd" id="1_oesap"]
+[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/graphics/illustration/The_Scene_3.jpg" id="1_oy3tj"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_sugc2"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="3_ew3y8"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="4_no3lt"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001
@@ -352,6 +352,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oesap")
 
 [node name="Sprite2D" type="TextureRect" parent="."]
 layout_mode = 1
@@ -360,7 +361,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_va2h6")
+texture = ExtResource("1_oy3tj")
 expand_mode = 5
 stretch_mode = 4
 
@@ -378,7 +379,7 @@ offset_top = -157.0
 offset_right = 596.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_wfjkp")
+theme_override_fonts/normal_font = ExtResource("2_sugc2")
 theme_override_font_sizes/normal_font_size = 40
 text = "Why does nothing I do ever work out?"
 visible_characters = 0
@@ -389,7 +390,7 @@ libraries = {
 "": SubResource("AnimationLibrary_f62j3")
 }
 autoplay = "new_animation"
-script = ExtResource("3_mf56h")
+script = ExtResource("3_ew3y8")
 
 [node name="Text" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -404,7 +405,7 @@ offset_top = -116.0
 offset_right = 379.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_wfjkp")
+theme_override_fonts/normal_font = ExtResource("2_sugc2")
 theme_override_font_sizes/normal_font_size = 40
 text = "What’s wrong with me? 
 "
@@ -415,7 +416,7 @@ visible_ratio = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_y1jtc")
 }
-script = ExtResource("3_mf56h")
+script = ExtResource("3_ew3y8")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 0)
@@ -430,7 +431,7 @@ offset_top = -153.0
 offset_right = 415.5
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_wfjkp")
+theme_override_fonts/normal_font = ExtResource("2_sugc2")
 theme_override_font_sizes/normal_font_size = 40
 text = "Is there something strange about me…"
 
@@ -438,7 +439,7 @@ text = "Is there something strange about me…"
 libraries = {
 "": SubResource("AnimationLibrary_nbnbm")
 }
-script = ExtResource("3_mf56h")
+script = ExtResource("3_ew3y8")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -452,7 +453,7 @@ offset_top = -169.0
 offset_right = 373.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_wfjkp")
+theme_override_fonts/normal_font = ExtResource("2_sugc2")
 theme_override_font_sizes/normal_font_size = 40
 text = "That’s why I decided to come here..."
 visible_characters = 0
@@ -462,7 +463,7 @@ visible_ratio = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_fjy6k")
 }
-script = ExtResource("3_mf56h")
+script = ExtResource("3_ew3y8")
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -476,7 +477,7 @@ offset_top = -74.0
 offset_right = 367.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_wfjkp")
+theme_override_fonts/normal_font = ExtResource("2_sugc2")
 theme_override_font_sizes/normal_font_size = 40
 text = "I want to find the solution here..."
 visible_characters = 0
@@ -502,23 +503,19 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_wfjkp")
+theme_override_fonts/font = ExtResource("2_sugc2")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next
 "
 vertical_icon_alignment = 0
-script = ExtResource("4_pj3ma")
-sceneTujuan = "res://scenes/Main_menu.tscn"
+script = ExtResource("4_no3lt")
+sceneTujuan = "res://scenes/scene_13.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
 wait_time = 20.2
 one_shot = true
 autostart = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_y3bgp")
-autoplay = true
 
 [connection signal="pressed" from="Button" to="RichTextLabel/AnimationPlayer" method="_on_next_button_pressed"]

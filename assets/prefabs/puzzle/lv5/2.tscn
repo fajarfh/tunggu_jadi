@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgyfaedf5pltv"]
+
+[ext_resource type="Texture2D" uid="uid://opj4dcw4h2r1" path="res://assets/prefabs/puzzle/lv5/Bonfire.png" id="1_5k3aq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akmg8"]
+atlas = ExtResource("1_5k3aq")
+region = Rect2(256, 0, 256, 256)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_akmg8")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ccwma5s37wrt4"]
 
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_61t08"]
-[ext_resource type="Texture2D" uid="uid://22qhmd0ih7yl" path="res://assets/graphics/Bubble.png" id="2_kt73f"]
+[ext_resource type="Texture2D" uid="uid://48dno7qbbllg" path="res://assets/graphics/Bubble.png" id="2_kt73f"]
 [ext_resource type="AudioStream" uid="uid://ckrr4mi26t5bw" path="res://assets/audio/SFX/Bubble Drip/3.ogg" id="3_key3e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_21qj6"]

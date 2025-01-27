@@ -1,10 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://cpsyq4bwgjivk"]
+[gd_scene load_steps=23 format=3 uid="uid://cpsyq4bwgjivk"]
 
-[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/illusrtration/The_Scene_3.jpg" id="1_bsa7x"]
-[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_uxiaw"]
-[ext_resource type="Script" path="res://animation_player.gd" id="3_mi61l"]
-[ext_resource type="Script" path="res://button.gd" id="4_2gjxi"]
-[ext_resource type="AudioStream" uid="uid://dfr68e760grkg" path="res://assets/2. Therapy Room.ogg" id="5_t1gby"]
+[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/graphics/illustration/The_Scene_3.jpg" id="1_bsa7x"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_uxiaw"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="3_mi61l"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="4_2gjxi"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001
@@ -510,15 +509,11 @@ text = "Next
 "
 vertical_icon_alignment = 0
 script = ExtResource("4_2gjxi")
-sceneTujuan = "res://scenes/scene_bubble.tscn"
+sceneTujuan = "res://scenes/scene_9.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
 wait_time = 20.2
 one_shot = true
 autostart = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_t1gby")
-autoplay = true
 
 [connection signal="pressed" from="Button" to="RichTextLabel/AnimationPlayer" method="_on_next_button_pressed"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=24 format=3 uid="uid://dyfgtha0277em"]
 
 [ext_resource type="Script" path="res://scripts/scene_1_callbgm.gd" id="1_jf6c8"]
-[ext_resource type="Texture2D" uid="uid://8mqk74gie720" path="res://assets/scene1.jpg" id="1_twyra"]
-[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_as2bf"]
-[ext_resource type="Script" path="res://animation_player.gd" id="2_ngixf"]
-[ext_resource type="Script" path="res://button.gd" id="3_lkowi"]
+[ext_resource type="Texture2D" path="res://assets/scene1.jpg" id="1_twyra"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_as2bf"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="2_ngixf"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="3_lkowi"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001

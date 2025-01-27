@@ -40,7 +40,7 @@ func _ready():
 	AudioControl.playBgm(level_name)
 	AudioControl.playAmbience(level_name)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	jeda -= delta
 
@@ -111,6 +111,7 @@ func losing():
 	curtain.find_child("AnimationPlayer").play("losing")
 	print(curtain.find_child("AnimationPlayer").is_playing())
 	await get_tree().create_timer(0.5).timeout
+	losePanel.visible = true
 	losePanel.find_child("AnimationPlayer").play("appear")
 	
 
@@ -120,6 +121,7 @@ func winDawg():
 	#await get_tree().create_timer(3.0).timeout
 	secondcurtain.find_child("AnimationPlayer").play("winning")
 	GlobalVariable.level_clear_stat[level_name] = true
+	GlobalVariable.levelBaruBeres = level_name
 	
 	
 func winPanel():
@@ -132,16 +134,11 @@ func winPanel():
 func pindahScene(path):
 	get_tree().change_scene_to_file(path)
 
-
 func _on_continue_button_pressed():
-	pindahScene(path_scene) # Replace with function body.
-
-
-
+	pindahScene(path_scene) 
 
 func _on_button_yes_pressed():
 	get_tree().reload_current_scene()
 
-
 func _on_button_no_pressed():
-	get_tree().change_scene_to_file("res://scenes/scene_bubble.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/scene_4_bubble.tscn") 

@@ -1,15 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpos2cmgt64ro"]
+[gd_scene load_steps=6 format=3 uid="uid://bpos2cmgt64ro"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_gf54h"]
-[ext_resource type="VideoStream" path="res://assets/lain/fragments Title Screen.ogv" id="2_0abpb"]
-[ext_resource type="Texture2D" uid="uid://ptkeu71xq7a7" path="res://assets/sample/interface_bg_sample.jpg" id="2_l3pmo"]
-[ext_resource type="FontFile" uid="uid://dy85x417tpuc3" path="res://assets/sample/BaksoSapi.otf" id="3_3n7v5"]
-[ext_resource type="Texture2D" uid="uid://c42t48cowfnbv" path="res://assets/SoftPink/09_IconArrowRighSoftPink.png" id="4_75bh2"]
-[ext_resource type="Texture2D" uid="uid://baiwih4k8h525" path="res://assets/SoftPink/BtnCloseSoftPink.png" id="5_4d08k"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jd8ya"]
-texture = ExtResource("2_l3pmo")
-modulate_color = Color(0.497474, 0.497474, 0.497474, 1)
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_jde74"]
+[ext_resource type="VideoStream" path="res://assets/lain/fragments Title Screen.ogv" id="2_umhsy"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="4_42ja4"]
+[ext_resource type="Texture2D" uid="uid://c42t48cowfnbv" path="res://assets/UI/09_IconArrowRighSoftPink.png" id="5_b2egh"]
+[ext_resource type="Texture2D" uid="uid://baiwih4k8h525" path="res://assets/UI/BtnCloseSoftPink.png" id="6_hiumy"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gf54h")
+script = ExtResource("1_jde74")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -28,20 +23,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 audio_track = 1
-stream = ExtResource("2_0abpb")
+stream = ExtResource("2_umhsy")
 autoplay = true
 expand = true
 loop = true
-
-[node name="Panel" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_jd8ya")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -60,7 +45,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.788235, 0.372549, 0.0980392, 1)
 theme_override_colors/font_shadow_color = Color(0.685835, 0.685835, 0.685835, 1)
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("3_3n7v5")
+theme_override_fonts/font = ExtResource("4_42ja4")
 theme_override_font_sizes/font_size = 55
 text = "tittle"
 horizontal_alignment = 1
@@ -84,9 +69,9 @@ theme_override_constants/separation = 20
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 15.0
-texture_normal = ExtResource("4_75bh2")
-texture_pressed = ExtResource("4_75bh2")
-texture_hover = ExtResource("4_75bh2")
+texture_normal = ExtResource("5_b2egh")
+texture_pressed = ExtResource("5_b2egh")
+texture_hover = ExtResource("5_b2egh")
 stretch_mode = 5
 
 [node name="Button3" type="TextureButton" parent="VBoxContainer"]
@@ -94,8 +79,8 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 15.0
-texture_normal = ExtResource("5_4d08k")
-texture_pressed = ExtResource("5_4d08k")
+texture_normal = ExtResource("6_hiumy")
+texture_pressed = ExtResource("6_hiumy")
 stretch_mode = 5
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]

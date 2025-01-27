@@ -1,11 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://birpwnlitu8hb"]
+[gd_scene load_steps=23 format=3 uid="uid://c5lsnesfbmje7"]
 
-[ext_resource type="Script" path="res://scripts/scene_11_callbgm.gd" id="1_oesap"]
-[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/illusrtration/The_Scene_3.jpg" id="1_oy3tj"]
-[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/BaksoSapi.otf" id="2_sugc2"]
-[ext_resource type="Script" path="res://animation_player.gd" id="3_ew3y8"]
-[ext_resource type="Script" path="res://button.gd" id="4_no3lt"]
-[ext_resource type="AudioStream" uid="uid://dfr68e760grkg" path="res://assets/2. Therapy Room.ogg" id="5_efdbj"]
+[ext_resource type="Texture2D" uid="uid://f6bfev1iiov0" path="res://assets/graphics/illustration/The_Scene_7.jpg" id="1_4g8wx"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_sugc2"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="3_ew3y8"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="4_no3lt"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001
@@ -353,7 +351,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oesap")
 
 [node name="Sprite2D" type="TextureRect" parent="."]
 layout_mode = 1
@@ -362,7 +359,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_oy3tj")
+texture = ExtResource("1_4g8wx")
 expand_mode = 5
 stretch_mode = 4
 
@@ -512,15 +509,11 @@ text = "Next
 "
 vertical_icon_alignment = 0
 script = ExtResource("4_no3lt")
-sceneTujuan = "res://scenes/scene_12.tscn"
+sceneTujuan = "res://scenes/scene_4_bubble.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
 wait_time = 20.2
 one_shot = true
 autostart = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_efdbj")
-autoplay = true
 
 [connection signal="pressed" from="Button" to="RichTextLabel/AnimationPlayer" method="_on_next_button_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd05e4qxxgw15"]
+
+[ext_resource type="Texture2D" uid="uid://crq3i7mejmqur" path="res://assets/prefabs/puzzle/lv4/Ribbon.png" id="1_mp8ng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoh2b"]
+atlas = ExtResource("1_mp8ng")
+region = Rect2(256, 256, 256, 256)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = SubResource("AtlasTexture_eoh2b")

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_gjr2h"]
 [ext_resource type="PackedScene" uid="uid://dvi5muhh85thr" path="res://assets/prefabs/conveyor.tscn" id="2_dt2fh"]
-[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_lnnl2"]
-[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/graphics/puzzle/lv1/Shoes.png" id="3_6qeo4"]
-[ext_resource type="FontFile" uid="uid://dy85x417tpuc3" path="res://assets/sample/BaksoSapi.otf" id="5_lkosk"]
+[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/graphics/illustration/The_Scene_5.jpg" id="2_lnnl2"]
+[ext_resource type="Texture2D" uid="uid://dlswntxv7e62l" path="res://assets/prefabs/puzzle/lv1/Shoes.png" id="3_6qeo4"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="5_lkosk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7erp"]
 
@@ -207,8 +207,8 @@ tracks/2/path = NodePath(".:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.93333, 3),
-"transitions": PackedFloat32Array(0.183011, 5.27807, 1),
+"times": PackedFloat32Array(0, 2.96667, 3),
+"transitions": PackedFloat32Array(0.450625, 1, 1),
 "update": 0,
 "values": [0.0, 6.28319, 6.28319]
 }
@@ -460,7 +460,7 @@ secondcurtain = NodePath("CanvasLayer/SecondCurtain")
 estear = NodePath("CanvasLayer/Estear")
 contButton = NodePath("CanvasLayer/ContinueButton")
 losePanel = NodePath("CanvasLayer/LosingCondition")
-path_scene = "res://scenes/scene_4.tscn"
+path_scene = "res://scenes/scene_5.tscn"
 bubble_path = "res://assets/prefabs/bubble.tscn"
 puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv1/lv1_1.tscn", "res://assets/graphics/puzzle/lv1/lv1_2.tscn", "res://assets/graphics/puzzle/lv1/lv1_3.tscn", "res://assets/graphics/puzzle/lv1/lv1_4.tscn"])
 puzzle_icons = [NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect2"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect3"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect4")]
@@ -615,10 +615,10 @@ libraries = {
 [node name="Estear" type="TextureRect" parent="CanvasLayer"]
 visible = false
 custom_minimum_size = Vector2(210, 210)
-offset_left = 1690.0
-offset_top = 20.0
-offset_right = 1900.0
-offset_bottom = 230.0
+offset_left = 853.0
+offset_top = 448.0
+offset_right = 1063.0
+offset_bottom = 658.0
 pivot_offset = Vector2(105, 105)
 texture = ExtResource("3_6qeo4")
 expand_mode = 1
@@ -651,6 +651,7 @@ libraries = {
 }
 
 [node name="LosingCondition" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5

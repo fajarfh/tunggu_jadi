@@ -19,11 +19,11 @@ func _ready():
 	#var random_scale = randf_range(1.5,2.0)
 	#var tween = get_tree().create_tween()
 	#tween.tween_property(self, "scale", Vector2(random_scale,random_scale), random_scale*1.5)
-	#tween.play()# Replace with function body.
+	#tween.play()
 	#tween.tween_callback(call_back_tween_scale.bind(Vector2(random_scale,random_scale)))
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	
 	add_constant_torque(randf_range(-500,500))
@@ -88,6 +88,5 @@ func call_back_tween_scale(newScale:Vector2):
 
 func bubble_death():
 	collision.disabled = true
-	#AudioControl.playOnce(AudioControl.bop2)
 	audio_stream_player_2d.play()
 	animator.play("pop")

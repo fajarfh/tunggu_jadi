@@ -1,7 +1,9 @@
 extends Control
 
 func _ready() -> void:
-	AudioControl.playBgm("main")
+	
+	if !AudioControl.bgm.playing:
+		AudioControl.playBgm("main")
 
 func _process(delta: float) -> void:
 	pass

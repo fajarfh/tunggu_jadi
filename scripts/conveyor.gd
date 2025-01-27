@@ -5,10 +5,10 @@ extends Area2D
 var impulse_strength = 100
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	pass
 
@@ -19,4 +19,4 @@ func _on_body_entered(body):
 	if body is RigidBody2D:
 		#print("pak eko?")
 		impulse_strength = randi_range(impulse_strength_min,impulse_strength_max)
-		body.apply_impulse(Vector2.from_angle(self.rotation_degrees)*impulse_strength) # Replace with function body.
+		body.apply_impulse(Vector2.from_angle(self.rotation_degrees)*impulse_strength) 

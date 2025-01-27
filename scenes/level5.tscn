@@ -1,10 +1,10 @@
 [gd_scene load_steps=31 format=3 uid="uid://yjgp1ba4jbjn"]
 
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_vtaaa"]
-[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/illusrtration/The_Scene_5.jpg" id="2_5ikin"]
+[ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/graphics/illustration/The_Scene_5.jpg" id="2_5ikin"]
 [ext_resource type="PackedScene" uid="uid://dvi5muhh85thr" path="res://assets/prefabs/conveyor.tscn" id="3_pymsn"]
-[ext_resource type="Texture2D" uid="uid://opj4dcw4h2r1" path="res://assets/graphics/puzzle/lv5/Bonfire.png" id="4_3l1ae"]
-[ext_resource type="FontFile" uid="uid://dy85x417tpuc3" path="res://assets/sample/BaksoSapi.otf" id="5_rvoen"]
+[ext_resource type="Texture2D" uid="uid://opj4dcw4h2r1" path="res://assets/prefabs/puzzle/lv5/Bonfire.png" id="4_3l1ae"]
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="5_rvoen"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7erp"]
 
@@ -207,8 +207,8 @@ tracks/2/path = NodePath(".:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.93333, 3),
-"transitions": PackedFloat32Array(0.183011, 5.27807, 1),
+"times": PackedFloat32Array(0, 2.96667, 3),
+"transitions": PackedFloat32Array(0.45, 1, 1),
 "update": 0,
 "values": [0.0, 6.28319, 6.28319]
 }
@@ -459,8 +459,8 @@ curtain = NodePath("CanvasLayer/Curtain")
 secondcurtain = NodePath("CanvasLayer/SecondCurtain")
 estear = NodePath("CanvasLayer/Estear")
 contButton = NodePath("CanvasLayer/ContinueButton")
-losePanel = NodePath("LosingCondition")
-path_scene = "res://scenes/scene_11.tscn"
+losePanel = NodePath("CanvasLayer/LosingCondition")
+path_scene = "res://scenes/scene_12.tscn"
 bubble_path = "res://assets/prefabs/bubble.tscn"
 puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv5/1.tscn", "res://assets/graphics/puzzle/lv5/2.tscn", "res://assets/graphics/puzzle/lv5/3.tscn", "res://assets/graphics/puzzle/lv5/4.tscn"])
 puzzle_icons = [NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect2"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect3"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect4")]
@@ -652,10 +652,9 @@ libraries = {
 "": SubResource("AnimationLibrary_24g22")
 }
 
-[node name="LosingCondition" type="VBoxContainer" parent="."]
+[node name="LosingCondition" type="VBoxContainer" parent="CanvasLayer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -670,7 +669,7 @@ grow_vertical = 2
 theme_override_constants/separation = 45
 alignment = 1
 
-[node name="Label" type="Label" parent="LosingCondition"]
+[node name="Label" type="Label" parent="CanvasLayer/LosingCondition"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.455167, 0.214098, 0.494962, 1)
 theme_override_colors/font_shadow_color = Color(0.116127, 0.116127, 0.116127, 1)
@@ -682,7 +681,7 @@ theme_override_font_sizes/font_size = 90
 text = "Retry?"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="LosingCondition"]
+[node name="Button" type="Button" parent="CanvasLayer/LosingCondition"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
 theme_override_constants/outline_size = 5
@@ -692,7 +691,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_sxqw1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rv1dl")
 text = "Yes"
 
-[node name="Button2" type="Button" parent="LosingCondition"]
+[node name="Button2" type="Button" parent="CanvasLayer/LosingCondition"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
 theme_override_constants/outline_size = 5
@@ -703,7 +702,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rv1dl")
 text = "No
 "
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LosingCondition"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/LosingCondition"]
 libraries = {
 "": SubResource("AnimationLibrary_qxgoe")
 }
+
+[connection signal="pressed" from="CanvasLayer/LosingCondition/Button" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/LosingCondition/Button2" to="." method="_on_button_no_pressed"]

@@ -5,18 +5,13 @@ extends Node
 @export var amb : AudioStreamPlayer
 
 #daftar SFX
-var bop = preload("res://assets/audio/SFX/highUp.ogg")
-var bop2 = preload("res://assets/audio/SFX/laser3.ogg")
-#var bomb = preload(bomb_res)
-#var ui1 = preload(ui1_res)
-#var ui2 = preload(ui2_res)
-#var jingleWin = preload(jingleWin_res)
-#var jingleLose = preload(jingleLose_res)
+
 var pop0 = preload("res://assets/audio/SFX/4. Bubble Pop.mp3")
 var pop1 = preload("res://assets/audio/SFX/Bubble Drip/1.ogg")
 var pop2 = preload("res://assets/audio/SFX/Bubble Drip/2.ogg")
 var pop3 = preload("res://assets/audio/SFX/Bubble Drip/3.ogg")
 var pop4 = preload("res://assets/audio/SFX/Bubble Drip/4.ogg")
+
 #daftar BGM
 var bgm_main = preload("res://assets/audio/BGM/1. Blessings (Main Theme).ogg")
 var bgm_intro = preload("res://assets/audio/BGM/2. Remedy .ogg")
@@ -30,15 +25,7 @@ var bgm_end = preload("res://assets/audio/BGM/7. Blessings ft. ANRI.ogg")
 var amb_playground = preload("res://assets/audio/Ambience/1. Children Playing at a Playground.mp3")
 var amb_therapy = preload("res://assets/audio/Ambience/2. Therapy Room.mp3")
 var amb_bonfire = preload("res://assets/audio/Ambience/3. Bonfire.mp3")
-
-func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
+ 
 func playOnce(aset):
 	sfx.stream = aset
 	sfx.play()

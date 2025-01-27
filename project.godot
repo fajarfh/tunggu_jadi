@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="yuru_jam"
-run/main_scene="res://scenes/Main_menu.tscn"
+run/main_scene="res://scenes/splash.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://assets/audio/default_bus_layout.tres"
 
 [autoload]
 
