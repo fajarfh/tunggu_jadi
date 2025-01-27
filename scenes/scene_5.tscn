@@ -373,14 +373,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -596.0
+offset_left = -449.0
 offset_top = -157.0
-offset_right = 596.0
+offset_right = 449.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_6na56")
 theme_override_font_sizes/normal_font_size = 40
-text = "Why does nothing I do ever work out?"
+text = "Playing with a beach ball was always fun"
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -404,10 +406,11 @@ offset_top = -116.0
 offset_right = 379.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_6na56")
 theme_override_font_sizes/normal_font_size = 40
-text = "What’s wrong with me? 
-"
+text = "even though I often lost the game... "
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -430,9 +433,11 @@ offset_top = -153.0
 offset_right = 415.5
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_6na56")
 theme_override_font_sizes/normal_font_size = 40
-text = "Is there something strange about me…"
+text = "Maybe I should try playing again."
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel2"]
 libraries = {
@@ -452,9 +457,11 @@ offset_top = -169.0
 offset_right = 373.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_6na56")
 theme_override_font_sizes/normal_font_size = 40
-text = "That’s why I decided to come here..."
+text = "But with whom? "
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -476,9 +483,11 @@ offset_top = -74.0
 offset_right = 367.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_6na56")
 theme_override_font_sizes/normal_font_size = 40
-text = "I want to find the solution here..."
+text = "I need more answers."
 visible_characters = 0
 visible_ratio = 0.0
 

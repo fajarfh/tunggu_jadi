@@ -7,6 +7,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var j = 0
+	AudioControl.playBgm("intro")
 	for i in GlobalVariable.level_clear_stat.values():
 		if i:
 			animButtons[j].play("reveal")
@@ -28,7 +29,7 @@ func _on_button_pressed() -> void:
 
 func _on_button_pressed2() -> void:
 	print("Button Pressed2")
-	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+	get_tree().change_scene_to_file("res://scenes/scene_4.tscn")
 
 
 func _on_button_pressed3() -> void:
