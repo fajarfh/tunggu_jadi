@@ -142,7 +142,7 @@ text = "Next
 "
 vertical_icon_alignment = 0
 script = ExtResource("4_pv0lu")
-sceneTujuan = "res://scenes/scene_bubble.tscn"
+sceneTujuan = "res://scenes/scene_4_bubble.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
 wait_time = 5.0

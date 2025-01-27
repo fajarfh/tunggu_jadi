@@ -462,7 +462,7 @@ contButton = NodePath("CanvasLayer/ContinueButton")
 losePanel = NodePath("CanvasLayer/LosingCondition")
 path_scene = "res://scenes/scene_12.tscn"
 bubble_path = "res://assets/prefabs/bubble.tscn"
-puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv5/1.tscn", "res://assets/graphics/puzzle/lv5/2.tscn", "res://assets/graphics/puzzle/lv5/3.tscn", "res://assets/graphics/puzzle/lv5/4.tscn"])
+puzzle_paths = Array[String](["res://assets/prefabs/puzzle/lv5/1.tscn", "res://assets/prefabs/puzzle/lv5/2.tscn", "res://assets/prefabs/puzzle/lv5/3.tscn", "res://assets/prefabs/puzzle/lv5/4.tscn"])
 puzzle_icons = [NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect2"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect3"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect4")]
 time = 60.0
 level_name = "level5"
@@ -707,5 +707,6 @@ libraries = {
 "": SubResource("AnimationLibrary_qxgoe")
 }
 
+[connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/LosingCondition/Button" to="." method="_on_button_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/LosingCondition/Button2" to="." method="_on_button_no_pressed"]

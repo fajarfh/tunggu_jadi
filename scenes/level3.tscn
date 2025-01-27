@@ -462,9 +462,9 @@ contButton = NodePath("CanvasLayer/ContinueButton")
 losePanel = NodePath("CanvasLayer/LosingCondition")
 path_scene = "res://scenes/scene_7.tscn"
 bubble_path = "res://assets/prefabs/bubble.tscn"
-puzzle_paths = Array[String](["res://assets/graphics/puzzle/lv3/1.tscn", "res://assets/graphics/puzzle/lv3/2.tscn", "res://assets/graphics/puzzle/lv3/3.tscn", "res://assets/graphics/puzzle/lv3/4.tscn"])
+puzzle_paths = Array[String](["res://assets/prefabs/puzzle/lv3/1.tscn", "res://assets/prefabs/puzzle/lv3/2.tscn", "res://assets/prefabs/puzzle/lv3/3.tscn", "res://assets/prefabs/puzzle/lv3/4.tscn"])
 puzzle_icons = [NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect2"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect3"), NodePath("CanvasLayer/MarginContainer/MarginContainer/GridContainer/TextureRect4")]
-time = 50.0
+time = 40.0
 level_name = "level3"
 jeda_min = 0.1
 jeda_max = 0.2
@@ -586,7 +586,6 @@ texture = SubResource("AtlasTexture_prcss")
 expand_mode = 2
 
 [node name="Curtain" type="TextureRect" parent="CanvasLayer"]
-visible = false
 modulate = Color(0, 0, 0, 0)
 anchors_preset = 15
 anchor_right = 1.0
