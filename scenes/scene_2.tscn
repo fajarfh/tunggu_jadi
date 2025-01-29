@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://pd57jqx32fhx"]
+[gd_scene load_steps=15 format=3 uid="uid://pd57jqx32fhx"]
 
 [ext_resource type="Texture2D" uid="uid://djdg0sqh3bdl4" path="res://assets/graphics/illustration/The_Scene_4.jpg" id="1_asqo0"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_iodw5"]
@@ -127,6 +127,10 @@ _data = {
 "new_animation2": SubResource("Animation_avoea")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fspg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4u84"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01bx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wpjqc"]
@@ -160,9 +164,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -192.0
+offset_left = -116.0
 offset_top = -157.0
-offset_right = 192.0
+offset_right = 248.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -188,9 +192,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -379.0
-offset_top = -116.0
-offset_right = 379.0
+offset_left = -246.0
+offset_top = -154.0
+offset_right = 424.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -220,10 +224,12 @@ offset_right = -14.0
 offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.792157, 0.792157, 0.792157, 1)
+theme_override_colors/font_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
 theme_override_fonts/font = ExtResource("2_iodw5")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8fspg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4u84")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next
@@ -233,7 +239,7 @@ script = ExtResource("4_mnf8a")
 sceneTujuan = "res://scenes/scene_3.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
-wait_time = 14.0
+wait_time = 9.1
 one_shot = true
 autostart = true
 

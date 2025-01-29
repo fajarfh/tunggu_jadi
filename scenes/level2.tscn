@@ -1,10 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://cwmnuxqs0wt1n"]
+[gd_scene load_steps=29 format=3 uid="uid://cwmnuxqs0wt1n"]
 
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_wiqs1"]
 [ext_resource type="Texture2D" uid="uid://dihyy2anqhwyh" path="res://assets/graphics/illustration/The_Scene_5.jpg" id="2_nt46k"]
 [ext_resource type="Texture2D" uid="uid://drfxotee8orh2" path="res://assets/prefabs/puzzle/lv2/Beach_Ball.png" id="4_bcqmx"]
 [ext_resource type="PackedScene" uid="uid://dvi5muhh85thr" path="res://assets/prefabs/conveyor.tscn" id="4_smenk"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="5_1srxu"]
+[ext_resource type="Theme" uid="uid://cuvavbnbkpybo" path="res://assets/graphics/ui.tres" id="5_3yno7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7erp"]
 
@@ -385,29 +386,6 @@ _data = {
 "slidein": SubResource("Animation_rwuvc")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nk65m"]
-bg_color = Color(0.801177, 0.408861, 0.901603, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.8, 0.407843, 0.901961, 1)
-expand_margin_left = 7.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itk57"]
-bg_color = Color(0.582043, 0.15593, 0.682924, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw6tn"]
-bg_color = Color(0.737255, 0.45098, 0.921569, 0.686275)
-border_width_left = 11
-border_width_top = 1
-border_width_right = 11
-border_width_bottom = 1
-border_color = Color(0.728611, 0.433903, 0.916477, 0.686275)
-shadow_color = Color(0.0941176, 0.054902, 0.0352941, 0.74902)
-shadow_size = 5
-shadow_offset = Vector2(3, 0)
-
 [sub_resource type="Animation" id="Animation_nhxs3"]
 length = 0.001
 tracks/0/type = "value"
@@ -647,13 +625,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -159.999
+offset_left = -160.0
 offset_top = 60.0
-offset_right = 160.001
+offset_right = 160.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
+theme = ExtResource("5_3yno7")
+theme_type_variation = &"ButtonUI"
 text = "CONTINUE"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ContinueButton"]
@@ -692,22 +671,14 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/LosingCondition"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 80
-theme_override_styles/hover = SubResource("StyleBoxFlat_nk65m")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_itk57")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kw6tn")
+theme = ExtResource("5_3yno7")
+theme_type_variation = &"ButtonUI"
 text = "Yes"
 
 [node name="Button2" type="Button" parent="CanvasLayer/LosingCondition"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.729412, 0.705882, 1)
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 80
-theme_override_styles/hover = SubResource("StyleBoxFlat_nk65m")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_itk57")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kw6tn")
+theme = ExtResource("5_3yno7")
+theme_type_variation = &"ButtonUI"
 text = "No
 "
 

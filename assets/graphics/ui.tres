@@ -1,0 +1,40 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cuvavbnbkpybo"]
+
+[ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="1_xe4e1"]
+[ext_resource type="FontFile" uid="uid://dtp2uuad34qsc" path="res://assets/graphics/fonts/Handwriting-Regular.otf" id="2_613dq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ism06"]
+bg_color = Color(0.737255, 0.45098, 0.921569, 0.686275)
+border_width_left = 11
+border_width_top = 1
+border_width_right = 11
+border_width_bottom = 1
+border_color = Color(0.728611, 0.433903, 0.916477, 0.686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8vgj"]
+bg_color = Color(0.737255, 0.45098, 0.921569, 0.686275)
+border_width_left = 11
+border_width_top = 1
+border_width_right = 11
+border_width_bottom = 1
+border_color = Color(0.728611, 0.433903, 0.916477, 0.686275)
+shadow_color = Color(0.0941176, 0.054902, 0.0352941, 0.74902)
+shadow_size = 5
+shadow_offset = Vector2(3, 0)
+
+[resource]
+default_font = ExtResource("2_613dq")
+default_font_size = 32
+ButtonUI/base_type = &"Button"
+ButtonUI/colors/font_color = Color(1, 0.729412, 0.705882, 1)
+ButtonUI/colors/font_focus_color = Color(0.999992, 0.455753, 0.434321, 1)
+ButtonUI/colors/font_hover_color = Color(1, 0.454902, 0.435294, 1)
+ButtonUI/colors/font_hover_pressed_color = Color(1, 0.454902, 0.435294, 1)
+ButtonUI/colors/font_outline_color = Color(0, 0, 0, 1)
+ButtonUI/colors/font_pressed_color = Color(1, 0.454902, 0.435294, 1)
+ButtonUI/constants/outline_size = 5
+ButtonUI/font_sizes/font_size = 48
+ButtonUI/fonts/font = ExtResource("1_xe4e1")
+ButtonUI/styles/hover = SubResource("StyleBoxFlat_ism06")
+ButtonUI/styles/normal = SubResource("StyleBoxFlat_l8vgj")
+ButtonUI/styles/pressed = SubResource("StyleBoxFlat_ism06")

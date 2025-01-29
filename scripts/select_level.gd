@@ -10,9 +10,9 @@ func _ready() -> void:
 	var k = 0
 	
 	if AudioControl.amb.playing:
-		var tween = get_tree().create_tween()
-		tween.tween_property(AudioControl.amb, "volume_db", linear_to_db(0.0), 0.5)
-		await tween.finished
+		#var tween = get_tree().create_tween()
+		#tween.tween_property(AudioControl.amb, "volume_db", linear_to_db(0.0), 0.5)
+		#await tween.finished
 		
 		AudioControl.amb.stop()
 		

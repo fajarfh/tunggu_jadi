@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_jde74"]
 [ext_resource type="VideoStream" path="res://assets/lain/fragments Title Screen.ogv" id="2_umhsy"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="4_42ja4"]
-[ext_resource type="Texture2D" uid="uid://c42t48cowfnbv" path="res://assets/UI/09_IconArrowRighSoftPink.png" id="5_b2egh"]
-[ext_resource type="Texture2D" uid="uid://baiwih4k8h525" path="res://assets/UI/BtnCloseSoftPink.png" id="6_hiumy"]
+[ext_resource type="Texture2D" uid="uid://c42t48cowfnbv" path="res://assets/graphics/UI/09_IconArrowRighSoftPink.png" id="5_b2egh"]
+[ext_resource type="Texture2D" uid="uid://baiwih4k8h525" path="res://assets/graphics/UI/BtnCloseSoftPink.png" id="6_hiumy"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

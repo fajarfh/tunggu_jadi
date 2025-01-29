@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://cpsyq4bwgjivk"]
+[gd_scene load_steps=16 format=3 uid="uid://cpsyq4bwgjivk"]
 
-[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/graphics/illustration/The_Scene_3.jpg" id="1_bsa7x"]
+[ext_resource type="Texture2D" uid="uid://boryp7l2op8mt" path="res://assets/graphics/illustration/The_Scene_10.jpg" id="1_gf8b0"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_uxiaw"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="3_mi61l"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="4_2gjxi"]
@@ -127,217 +127,11 @@ _data = {
 "new_animation2": SubResource("Animation_avoea")
 }
 
-[sub_resource type="Animation" id="Animation_mnj84"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbhq0"]
 
-[sub_resource type="Animation" id="Animation_oindn"]
-resource_name = "new_animation"
-length = 20.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(9, 10),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(12.9667, 13.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0cgd"]
 
-[sub_resource type="Animation" id="Animation_1nbw6"]
-resource_name = "new_animation_3"
-length = 20.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(9, 10),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(13, 13.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nbnbm"]
-_data = {
-"RESET": SubResource("Animation_mnj84"),
-"new_animation": SubResource("Animation_oindn"),
-"new_animation_3": SubResource("Animation_1nbw6")
-}
-
-[sub_resource type="Animation" id="Animation_kmgx6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_epi4t"]
-resource_name = "new_animation5"
-length = 25.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(14, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(18, 18.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fjy6k"]
-_data = {
-"RESET": SubResource("Animation_kmgx6"),
-"new_animation5": SubResource("Animation_epi4t")
-}
-
-[sub_resource type="Animation" id="Animation_8nj43"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_5ibdx"]
-resource_name = "new_animation6"
-length = 30.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(16, 17),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(20, 20.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_stxqu"]
-_data = {
-"RESET": SubResource("Animation_8nj43"),
-"new_animation6": SubResource("Animation_5ibdx")
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3jt8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01bx"]
 
@@ -359,7 +153,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_bsa7x")
+texture = ExtResource("1_gf8b0")
 expand_mode = 5
 stretch_mode = 4
 
@@ -372,14 +166,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -596.0
+offset_left = -254.0
 offset_top = -157.0
-offset_right = 596.0
+offset_right = 477.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_uxiaw")
 theme_override_font_sizes/normal_font_size = 40
-text = "Why does nothing I do ever work out?"
+text = "As she was about to take a photo, "
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -398,15 +194,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -379.0
-offset_top = -116.0
-offset_right = 379.0
+offset_left = -532.0
+offset_top = -148.0
+offset_right = 772.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_uxiaw")
 theme_override_font_sizes/normal_font_size = 40
-text = "What’s wrong with me? 
-"
+text = "her twin was swept away by the waves and later found dead."
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -415,76 +212,6 @@ libraries = {
 "": SubResource("AnimationLibrary_y1jtc")
 }
 script = ExtResource("3_mi61l")
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-modulate = Color(0, 0, 0, 0)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -415.5
-offset_top = -153.0
-offset_right = 415.5
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_uxiaw")
-theme_override_font_sizes/normal_font_size = 40
-text = "Is there something strange about me…"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel2"]
-libraries = {
-"": SubResource("AnimationLibrary_nbnbm")
-}
-script = ExtResource("3_mi61l")
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -373.0
-offset_top = -169.0
-offset_right = 373.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_uxiaw")
-theme_override_font_sizes/normal_font_size = 40
-text = "That’s why I decided to come here..."
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel3"]
-libraries = {
-"": SubResource("AnimationLibrary_fjy6k")
-}
-script = ExtResource("3_mi61l")
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -367.0
-offset_top = -74.0
-offset_right = 367.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_uxiaw")
-theme_override_font_sizes/normal_font_size = 40
-text = "I want to find the solution here..."
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel4"]
-libraries = {
-"": SubResource("AnimationLibrary_stxqu")
-}
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -500,9 +227,12 @@ offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.423529, 0.466667, 0.537255, 1)
 theme_override_fonts/font = ExtResource("2_uxiaw")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cbhq0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_u0cgd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j3jt8")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next
@@ -512,7 +242,7 @@ script = ExtResource("4_2gjxi")
 sceneTujuan = "res://scenes/scene_9.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
-wait_time = 20.2
+wait_time = 7.0
 one_shot = true
 autostart = true
 

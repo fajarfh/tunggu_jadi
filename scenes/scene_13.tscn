@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://dm0bni1ax4gao"]
+[gd_scene load_steps=23 format=3 uid="uid://dm0bni1ax4gao"]
 
 [ext_resource type="Script" path="res://scripts/scene_13_stopamb.gd" id="1_5h5ta"]
-[ext_resource type="Texture2D" uid="uid://u1krt3i7iwlb" path="res://assets/graphics/illustration/The_Scene_3.jpg" id="1_va2h6"]
+[ext_resource type="Texture2D" uid="uid://ck0pgahhf7v2w" path="res://assets/graphics/illustration/The_Scene_11.jpg" id="2_s2tcv"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_wfjkp"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="3_mf56h"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="4_pj3ma"]
@@ -104,7 +104,7 @@ tracks/0/path = NodePath(".:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(5.13333, 6.13333),
+"times": PackedFloat32Array(5.13333, 7.03333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -193,7 +193,7 @@ tracks/0/path = NodePath(".:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(9, 10),
+"times": PackedFloat32Array(9, 10.4667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -255,7 +255,7 @@ tracks/0/path = NodePath(".:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(14, 15),
+"times": PackedFloat32Array(14, 15.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -279,66 +279,9 @@ _data = {
 "new_animation5": SubResource("Animation_epi4t")
 }
 
-[sub_resource type="Animation" id="Animation_8nj43"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngs8a"]
 
-[sub_resource type="Animation" id="Animation_5ibdx"]
-resource_name = "new_animation6"
-length = 30.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(16, 17),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(20, 20.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_stxqu"]
-_data = {
-"RESET": SubResource("Animation_8nj43"),
-"new_animation6": SubResource("Animation_5ibdx")
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ygat7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01bx"]
 
@@ -361,7 +304,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_va2h6")
+texture = ExtResource("2_s2tcv")
 expand_mode = 5
 stretch_mode = 4
 
@@ -374,14 +317,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -596.0
+offset_left = -478.0
 offset_top = -157.0
-offset_right = 596.0
+offset_right = 420.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_wfjkp")
 theme_override_font_sizes/normal_font_size = 40
-text = "Why does nothing I do ever work out?"
+text = "And for the first time, she felt at peace. "
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -401,14 +346,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -379.0
-offset_top = -116.0
-offset_right = 379.0
+offset_top = -129.0
+offset_right = 384.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_wfjkp")
 theme_override_font_sizes/normal_font_size = 40
-text = "What’s wrong with me? 
-"
+text = "The weight that had been crushing her for so long began to fade,"
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -426,14 +372,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -415.5
+offset_left = -508.0
 offset_top = -153.0
-offset_right = 415.5
+offset_right = 573.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_wfjkp")
 theme_override_font_sizes/normal_font_size = 40
-text = "Is there something strange about me…"
+text = "replaced by a warmth she couldn’t quite explain. "
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel2"]
 libraries = {
@@ -448,14 +396,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -373.0
-offset_top = -169.0
-offset_right = 373.0
+offset_left = -572.0
+offset_top = -144.0
+offset_right = 532.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_wfjkp")
 theme_override_font_sizes/normal_font_size = 40
-text = "That’s why I decided to come here..."
+text = "Maybe, just maybe, she had finally found herself."
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -464,29 +414,6 @@ libraries = {
 "": SubResource("AnimationLibrary_fjy6k")
 }
 script = ExtResource("3_mf56h")
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -367.0
-offset_top = -74.0
-offset_right = 367.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_wfjkp")
-theme_override_font_sizes/normal_font_size = 40
-text = "I want to find the solution here..."
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel4"]
-libraries = {
-"": SubResource("AnimationLibrary_stxqu")
-}
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -502,9 +429,11 @@ offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.976471, 0.980392, 0.984314, 1)
 theme_override_fonts/font = ExtResource("2_wfjkp")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ngs8a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ygat7")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next

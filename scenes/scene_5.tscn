@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bj248rj8o0cd3"]
+[gd_scene load_steps=19 format=3 uid="uid://bj248rj8o0cd3"]
 
 [ext_resource type="Texture2D" uid="uid://ckvxay78ae6l5" path="res://assets/graphics/illustration/The_Scene_2.jpg" id="1_4vudo"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_yfw8r"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="3_ce8w0"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="4_ahdu4"]
+[ext_resource type="Script" path="res://scripts/animation_player2.gd" id="4_xicgd"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001
@@ -103,7 +104,7 @@ tracks/0/path = NodePath(".:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(5.13333, 6.13333),
+"times": PackedFloat32Array(5.13333, 7.66667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -115,7 +116,7 @@ tracks/1/path = NodePath(".:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(9, 9.1),
+"times": PackedFloat32Array(8.16667, 8.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -126,6 +127,71 @@ _data = {
 "RESET": SubResource("Animation_imlug"),
 "new_animation2": SubResource("Animation_avoea")
 }
+
+[sub_resource type="Animation" id="Animation_0dw3w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_trygb"]
+resource_name = "new_animation3"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(8.5, 9.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(12.3667, 12.5333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inavl"]
+_data = {
+"RESET": SubResource("Animation_0dw3w"),
+"new_animation3": SubResource("Animation_trygb")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fn1a0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku083"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01bx"]
 
@@ -160,11 +226,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -231.0
-offset_top = -157.0
-offset_right = 231.0
+offset_left = -156.0
+offset_top = -136.0
+offset_right = 320.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_yfw8r")
 theme_override_font_sizes/normal_font_size = 40
 text = "Pink roller skates... "
@@ -186,14 +254,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -553.5
-offset_top = -116.0
-offset_right = 553.5
+offset_left = -135.0
+offset_top = -160.0
+offset_right = 374.0
+offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = ExtResource("2_yfw8r")
 theme_override_font_sizes/normal_font_size = 40
-text = "They were my favorite.I loved those days. "
+text = "They were my favorite.
+I loved those days. 
+"
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -202,6 +275,30 @@ libraries = {
 "": SubResource("AnimationLibrary_y1jtc")
 }
 script = ExtResource("3_ce8w0")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_top = -133.0
+offset_right = 359.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("2_yfw8r")
+theme_override_font_sizes/normal_font_size = 40
+text = "What else can I uncover?"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel2"]
+libraries = {
+"": SubResource("AnimationLibrary_inavl")
+}
+script = ExtResource("4_xicgd")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -217,9 +314,11 @@ offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.16446, 0.16446, 0.16446, 1)
 theme_override_fonts/font = ExtResource("2_yfw8r")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fn1a0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ku083")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next
@@ -229,7 +328,7 @@ script = ExtResource("4_ahdu4")
 sceneTujuan = "res://scenes/scene_4_bubble.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
-wait_time = 20.2
+wait_time = 13.0
 one_shot = true
 autostart = true
 

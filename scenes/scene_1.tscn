@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://dyfgtha0277em"]
+[gd_scene load_steps=30 format=3 uid="uid://dyfgtha0277em"]
 
 [ext_resource type="Script" path="res://scripts/scene_1_callbgm.gd" id="1_jf6c8"]
 [ext_resource type="Texture2D" uid="uid://b48pk13r0ah2x" path="res://assets/graphics/illustration/scene1.jpg" id="1_twyra"]
 [ext_resource type="FontFile" uid="uid://ddo5rcctymxoi" path="res://assets/graphics/fonts/BaksoSapi.otf" id="2_as2bf"]
 [ext_resource type="Script" path="res://scripts/animation_player.gd" id="2_ngixf"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="3_lkowi"]
+[ext_resource type="Script" path="res://scripts/animation_player2.gd" id="5_1ifut"]
 
 [sub_resource type="Animation" id="Animation_kac5y"]
 length = 0.001
@@ -119,7 +120,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(9, 9.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 0, 0.027451, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y1jtc"]
@@ -340,6 +341,71 @@ _data = {
 "new_animation6": SubResource("Animation_5ibdx")
 }
 
+[sub_resource type="Animation" id="Animation_vdnt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7w6j5"]
+resource_name = "new_animation7"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(20, 21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(24, 24.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cm3uh"]
+_data = {
+"RESET": SubResource("Animation_vdnt5"),
+"new_animation7": SubResource("Animation_7w6j5")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xn7mf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbygw"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01bx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wpjqc"]
@@ -374,9 +440,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -424.5
-offset_top = -157.0
-offset_right = 424.5
+offset_left = -317.0
+offset_top = -113.0
+offset_right = 498.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -402,9 +468,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -379.0
+offset_left = -166.0
 offset_top = -116.0
-offset_right = 379.0
+offset_right = 332.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -430,9 +496,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -415.5
-offset_top = -153.0
-offset_right = 415.5
+offset_left = -320.0
+offset_top = -115.0
+offset_right = 521.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -454,9 +520,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -439.0
-offset_top = -124.0
-offset_right = 307.0
+offset_left = -315.0
+offset_top = -114.0
+offset_right = 476.0
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -481,9 +547,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -367.0
-offset_top = -74.0
-offset_right = 367.0
+offset_left = -300.0
+offset_top = -109.0
+offset_right = 434.0
+offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -498,6 +565,33 @@ visible_ratio = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_stxqu")
 }
+script = ExtResource("5_1ifut")
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -302.0
+offset_top = -108.0
+offset_right = 448.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("2_as2bf")
+theme_override_font_sizes/normal_font_size = 40
+text = "I want to find the solution here..."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel5"]
+libraries = {
+"": SubResource("AnimationLibrary_cm3uh")
+}
+script = ExtResource("5_1ifut")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -516,6 +610,8 @@ theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_as2bf")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xn7mf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qbygw")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c01bx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wpjqc")
 text = "Next
@@ -525,7 +621,7 @@ script = ExtResource("3_lkowi")
 sceneTujuan = "res://scenes/scene_2.tscn"
 
 [node name="Timer" type="Timer" parent="Button"]
-wait_time = 20.2
+wait_time = 24.2
 one_shot = true
 autostart = true
 
